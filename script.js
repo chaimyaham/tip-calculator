@@ -32,7 +32,7 @@ const validationbill=()=>{
     
 }
 const validaionNumOfPoeple=()=>{
-    var pattern = /^[1-9]*(,[1-9]{3})*(\.[1-9]+)*$/ ;
+    var pattern = /^[0-9]*(,[0-9]{3})*(\.[0-9]+)*$/ ;
     if(+number_of_poeple.value===0 || pattern.test(number_of_poeple.value)===false){
         number_of_poeple.style.border="2px solid red";
         errormsg.style.visibility="inherit";
