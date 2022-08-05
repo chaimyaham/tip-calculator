@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+    --clr-primary-strong-cyan: hsl(172, 67%, 45%);
+    --clr-neutral-very-dark-cyan: hsl(183, 100%, 15%);
+    --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --clr-grayish-cyan: hsl(184, 14%, 56%);
+    --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+    --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --ff: 'Space Mono', monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+}
+body{
+    background-color: var(--clr-light-grayish-cyan);
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+header h1{
+    text-align: center;
+    color: var(--clr-dark-grayish-cyan);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+    line-height: 25px;
+    margin-top: 20px;
+
+
+}
+main{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px;
+    width: clamp( 90%,1000px,100%);
+    
+}
+.leftSide{
+    width: 50%;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    color: var(--clr-grayish-cyan);
+}
+.leftSide .item1,.item2{
+    margin-bottom: 25px;
+}
+.leftSide input[type="number"]{
+    width: 87%;
+    height: 45px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    background-color: var(--clr-very-light-grayish-cyan);
+    direction: rtl;
+    color: var(--clr-neutral-very-dark-cyan);
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 5px;
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.leftSide .item1 img,.leftSide .item3 img{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 20px;
+} 
+.leftSide input[type="radio"]{
+    display: none;
+    
+
+}
+.leftSide .item2 .radiobtn{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.leftSide .item2 .radiobtn input[name="typeinput"]{
+    width:110px;
+    padding-left: 0;
+    padding-right: 10px;
+    text-transform: capitalize;
+
+
+}
+.leftSide .item2 label:not(:first-child){
+    border: none;
+    height: 45px;
+    color: var(--clr-very-light-grayish-cyan);
+    width:110px;
+    text-align: center;
+    padding-top: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: var(--clr-neutral-very-dark-cyan);
+    cursor: pointer;
+    font-size: 24px;
+}
+.leftSide input[type="radio"]:checked+label{
+    background-color:hsl(172, 100%, 74%);
+    color: var(--clr-neutral-very-dark-cyan);
+    transition: all .5s ease;
+}
+.leftSide .item1 input,.leftSide .item3 input{
+    margin-top: 10px;
+}
+
+
+.rightSide{
+    width: 50%;
+    background-color: var(--clr-neutral-very-dark-cyan);
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    
+    
+ 
+}
+.rightSide div{
+    margin-top: 20px;
+}
+.rightSide p{
+    color: var(--clr-grayish-cyan);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+.rightSide p .title{
+    color: var(--clr-light-grayish-cyan);
+    font-size: 18px;
+}
+.rightSide p .amount{
+    position: absolute;
+    color: var(--clr-primary-strong-cyan);
+    font-size:clamp(2rem,2.75rem,3rem);
+    margin-left: clamp(70px,17%,180px);
+    margin-top: -13px;
+}
+
+#resetBTN{
+    width: 100%;
+    background-color: hsl(183, 96%, 20%);
+    border: none;
+    height: 50px;
+    font-family: var(--ff);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:var(--clr-neutral-very-dark-cyan);
+    border-radius: 5px;
+    margin-top: 100px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    
+
+}
+#resetBTN:hover{
+    background-color:hsl(172, 100%, 74%);
+}
+#errormsg{
+    color: rgb(247, 102, 102);
+    margin-left: clamp(10%,20%,25%);
+    visibility: hidden;
+
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:770px){
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 20px;
+        width: 90%;
+        margin: 20px;
+    }
+   
+
+    .leftSide{
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .leftSide input[type="number"]{
+        width: 100%;
+    }
+    .leftSide .item2 label:not(:first-child),
+    .leftSide .item2 .radiobtn input[name="typeinput"]
+    {
+       
+        width: 45%;
+    }
+    #errormsg{
+        display: none;
+    }
+    .rightSide{
+        width: 95%;
+    }
+    .rightSide p{
+      
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .rightSide p .title{
+    
+        font-size: 16px;
+    }
+    .rightSide p .amount{
+      
+        font-size:clamp(1rem,2rem,3rem);
+        margin-left: 33%;
+        margin-top: -10px;
+    }
+}
+@media screen and (max-width:330px){
+    .rightSide p .amount{
+      
+       position: relative;
+    }
+}
